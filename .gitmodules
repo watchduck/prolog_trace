@@ -1,0 +1,6 @@
+[submodule "prolog_trace_frontend"]
+	path = prolog_trace_frontend
+	url = https://github.com/watchduck/prolog_trace_frontend.git
+[submodule "prolog_trace_backend"]
+	path = prolog_trace_backend
+	url = https://github.com/watchduck/prolog_trace_backend.git
