@@ -13,7 +13,9 @@ The following screenshots show a console output and the two versions of the corr
 </table>
 
 The backend uses Django REST framework and the frontend is written in Vue.js.
-(Like my [DAG](https://github.com/watchduck/DAG) app.)
+(Like my [DAG](https://github.com/watchduck/DAG) app.)<br>
+They are in their own repos [prolog_trace_backend](https://github.com/watchduck/prolog_trace_backend)
+and [prolog_trace_frontend](https://github.com/watchduck/prolog_trace_frontend).
 
 The app can be found at **[prologtrace1.watchduck.net](http://prologtrace1.watchduck.net)**.
 (The backend API is [back-prologtrace1.watchduck.net/trace](http://back-prologtrace1.watchduck.net/trace).)<br>
