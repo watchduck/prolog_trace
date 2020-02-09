@@ -25,6 +25,13 @@ which is explained in
 For the formulas in the table cells one the choose between two formats: Linear formulas with parentheses,
 and [tree structures](https://en.wikipedia.org/wiki/Tree_structure) that are themselves little tables.
 
+The following screenshot shows the tree structure for a result in a
+[common Prolog example](https://commons.wikimedia.org/wiki/File:Prolog_travel_graph.svg)
+about travel routes,<br>
+namely the question how to get from Valmont to Bangkok. (This is the fourth example shown on the page.)
+![travel_result_table](https://user-images.githubusercontent.com/8267930/74094413-15ad5700-4ae1-11ea-8fd3-64cca8be47fd.png).
+
+
 A proof of concept for these little tables is the separate [tree_table](https://github.com/watchduck/tree_table) app,
 which uses the same backend.<br>
 It can be found at **[treetable.watchduck.net](http://treetable.watchduck.net)**.
