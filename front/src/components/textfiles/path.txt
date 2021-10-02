@@ -1,0 +1,19 @@
+spd(
+    valmont,                    % START
+    stvp(                       % PATH
+        valmont,                    % start
+        car,                        % transport
+        saarbruecken,               % via
+        stvp(                       % path
+            saarbruecken,               % start
+            train,                      % transport
+            frankfurt,                  % via
+            std(                        % path
+                frankfurt,                  % start
+                plane,                      % transport
+                bangkok                     % destination
+            )
+        )
+    ),
+    bangkok                     % DESTINATION
+)

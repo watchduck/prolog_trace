@@ -1,0 +1,6 @@
+Call: (8) happy(anna) ? creep
+Call: (9) rich(anna) ? creep
+Exit: (9) rich(anna) ? creep
+Call: (9) famous(anna) ? creep
+Fail: (9) famous(anna) ? creep
+Fail: (8) happy(anna) ? creep

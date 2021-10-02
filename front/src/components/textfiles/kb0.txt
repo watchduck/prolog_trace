@@ -1,0 +1,6 @@
+rich(anna).
+famous(bob).
+
+happy(anna):-
+    rich(anna),
+    famous(anna).

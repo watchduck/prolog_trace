@@ -1,0 +1,225 @@
+/////////// tables
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td { border: 1px solid black; }
+
+th {
+  font-weight: normal;
+  &.rowindex { padding-right: 15px; }
+}
+
+
+table#functors-table, table#matrix-table, table#options {
+  margin: 0 30px 30px 0;
+}
+
+table#matrix-table, div#opt-fun {
+  float: left;
+}
+
+@mixin light-table {
+  td {
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+  }
+}
+
+table#options {
+  @include light-table;
+  td.left  { text-align: right; }
+  td.right { text-align: left;  }
+}
+
+
+/////////// mouseover highlights of formulas
+
+$specific: red;                     // term element in the matrix table on which the mouse is
+$unspecific: rgba(black, .4);       // every term element like that on which the mouse is
+
+span.term-formula-element.focus {   // term elements are functor names, brackets and commas
+  &.text {                          // text means the functor name, i.e. not bracket or comma
+    background-color: $unspecific;
+  }
+  &.specific {
+    background-color: rgba($specific, .5);
+    &.text {
+      background-color: $specific;
+    }
+  }
+}
+
+td.term-table-cell.focus {
+  background-color: $unspecific;
+}
+
+
+/////////// term tables
+
+table.term-table {
+  border-collapse: separate;
+  margin-left:auto;
+  margin-right:auto;
+  td.term-table-cell {
+    border: none;
+    background-color: rgba(black, .1);
+    &.focus {
+      background-color: $unspecific;
+    }
+  }
+  td.gap {
+    border: none;
+  }
+}
+
+
+
+/////////// functor table
+
+tr.functor {
+  &.focused { background-color: $unspecific; }
+  td {
+    padding: 1px 3px;
+    &.light { color: #ccc; }
+    &.customName {
+      border: 0;
+      background-color: white;
+      padding-left: 20px;
+      input.red { background-color: red; }
+    }
+  }
+}
+
+
+/////////// table colors
+
+@mixin assign-colors {
+  $colors: (
+    c: #00e4e3,   // call: blue
+    r: #ffcd00,   // redo: yellow
+    f: #ff0000,   // fail: red
+    e: #00c500    // exit: green
+  );
+  $combinedClasses: cf, ce, rf, re;  // left border has 1st, rest of cell 2nd color
+  @each $class, $color in $colors {
+    &.#{$class} {
+      background-color: rgba($color, .3);
+    }
+  }
+  @each $class in $combinedClasses {
+    $char1: str-slice($class, 1, 1);  $color1: map-get($colors, $char1);
+    $char2: str-slice($class, 2, 2);  $color2: map-get($colors, $char2);
+    &.#{$class} {
+      background-color: rgba($color2, .3);
+      background-image: linear-gradient(135deg, $color1, $color1 12px, transparent 12px, transparent);
+    }
+  }
+}
+
+table#matrix-table td {
+  @include assign-colors;
+  padding: 3px;
+}
+
+table#legend td {
+  @include assign-colors;
+  padding: 2px 12px;
+}
+
+
+/////////// intro
+
+$width: 880px;
+
+div#intro-text {
+  margin-bottom: 20px;
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+$showDetailsBackground: #fff4e4;
+
+@mixin code-style {
+  padding: 3px;
+  margin: 4px;
+  background-color: rgba(0, 0, 0, .02);
+}
+
+table#intro-table {
+
+  width: $width;
+
+  @include light-table;
+  td, th {
+    padding: 2px 15px;
+  }
+  td.button {
+    padding: 1px;
+    button {
+      padding: 1px 14px;
+      width: 100%;
+    }
+  }
+
+  tr.permanent.showDetails td {
+    background-color: $showDetailsBackground;
+  }
+  tr.details {
+    display: none;
+    &.showDetails {
+      display: table-row;
+    }
+    td {
+      text-align: left;
+      background-color: $showDetailsBackground;
+      pre {
+        display: inline-block;
+        @include code-style;
+      }
+      code {
+        @include code-style;
+      }
+      p { margin: 2px; }
+    }
+  }
+
+}
+
+
+/////////// misc.
+
+a#reset {
+  display: block;
+  margin-bottom: 30px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
+  display: inline;
+}
+
+button#post {
+  display: block;
+  margin-top: 10px;
+  padding: 3px 17px;
+}
+
+p.error {
+  color: red;
+}
+
+textarea {
+  width: $width;
+}
+
+#octocat {
+  position: absolute;
+  left: $width - 50px;
+}

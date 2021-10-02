@@ -1,0 +1,15 @@
+# back
+__pycache__/
+*.py[cod]
+*.sqlite3
+manage.py
+
+# front
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# general
+.idea/*

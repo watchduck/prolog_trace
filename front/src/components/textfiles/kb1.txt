@@ -1,0 +1,8 @@
+loves(alice, bob).
+loves(bob, alice).
+loves(bob, clara).
+
+jealous(X, Y):-
+    loves(X, Link),
+    loves(Link, Y),
+    X \= Y.

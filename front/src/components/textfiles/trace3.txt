@@ -1,0 +1,49 @@
+Call: (8) spd(valmont, _1, bangkok) ? creep
+Call: (9) direct(valmont, _2, bangkok) ? creep
+Call: (10) byCar(valmont, bangkok) ? creep
+Fail: (10) byCar(valmont, bangkok) ? creep
+Redo: (9) direct(valmont, _2, bangkok) ? creep
+Call: (10) byTrain(valmont, bangkok) ? creep
+Fail: (10) byTrain(valmont, bangkok) ? creep
+Redo: (9) direct(valmont, _2, bangkok) ? creep
+Call: (10) byPlane(valmont, bangkok) ? creep
+Fail: (10) byPlane(valmont, bangkok) ? creep
+Fail: (9) direct(valmont, _2, bangkok) ? creep
+Redo: (8) spd(valmont, _1, bangkok) ? creep
+Call: (9) direct(valmont, _2, _3) ? creep
+Call: (10) byCar(valmont, _3) ? creep
+Exit: (10) byCar(valmont, saarbruecken) ? creep
+Exit: (9) direct(valmont, car, saarbruecken) ? creep
+Call: (9) spd(saarbruecken, _4, bangkok) ? creep
+Call: (10) direct(saarbruecken, _5, bangkok) ? creep
+Call: (11) byCar(saarbruecken, bangkok) ? creep
+Fail: (11) byCar(saarbruecken, bangkok) ? creep
+Redo: (10) direct(saarbruecken, _5, bangkok) ? creep
+Call: (11) byTrain(saarbruecken, bangkok) ? creep
+Fail: (11) byTrain(saarbruecken, bangkok) ? creep
+Redo: (10) direct(saarbruecken, _5, bangkok) ? creep
+Call: (11) byPlane(saarbruecken, bangkok) ? creep
+Fail: (11) byPlane(saarbruecken, bangkok) ? creep
+Fail: (10) direct(saarbruecken, _5, bangkok) ? creep
+Redo: (9) spd(saarbruecken, _4, bangkok) ? creep
+Call: (10) direct(saarbruecken, _5, _6) ? creep
+Call: (11) byCar(saarbruecken, _6) ? creep
+Fail: (11) byCar(saarbruecken, _6) ? creep
+Redo: (10) direct(saarbruecken, _5, _6) ? creep
+Call: (11) byTrain(saarbruecken, _6) ? creep
+Exit: (11) byTrain(saarbruecken, frankfurt) ? creep
+Exit: (10) direct(saarbruecken, train, frankfurt) ? creep
+Call: (10) spd(frankfurt, _7, bangkok) ? creep
+Call: (11) direct(frankfurt, _8, bangkok) ? creep
+Call: (12) byCar(frankfurt, bangkok) ? creep
+Fail: (12) byCar(frankfurt, bangkok) ? creep
+Redo: (11) direct(frankfurt, _8, bangkok) ? creep
+Call: (12) byTrain(frankfurt, bangkok) ? creep
+Fail: (12) byTrain(frankfurt, bangkok) ? creep
+Redo: (11) direct(frankfurt, _8, bangkok) ? creep
+Call: (12) byPlane(frankfurt, bangkok) ? creep
+Exit: (12) byPlane(frankfurt, bangkok) ? creep
+Exit: (11) direct(frankfurt, plane, bangkok) ? creep
+Exit: (10) spd(frankfurt, std(frankfurt, plane, bangkok), bangkok) ? creep
+Exit: (9) spd(saarbruecken, stvp(saarbruecken, train, frankfurt, std(frankfurt, plane, bangkok)), bangkok) ? creep
+Exit: (8) spd(valmont, stvp(valmont, car, saarbruecken, stvp(saarbruecken, train, frankfurt, std(frankfurt, plane, bangkok))), bangkok) ? creep

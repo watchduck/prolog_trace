@@ -1,0 +1,34 @@
+byCar(auckland, hamilton).
+byCar(hamilton, raglan).
+byCar(valmont, saarbruecken).
+byCar(valmont, metz).
+
+byTrain(metz, frankfurt).
+byTrain(saarbruecken, frankfurt).
+byTrain(metz, paris).
+byTrain(saarbruecken, paris).
+
+byPlane(frankfurt, bangkok).
+byPlane(frankfurt, singapore).
+byPlane(paris, losAngeles).
+byPlane(bangkok, auckland).
+byPlane(singapore, auckland).
+byPlane(losAngeles, auckland).
+
+
+spd(Start, std(Start, Transport, Dest), Dest) :-
+    direct(Start, Transport, Dest).
+
+spd(Start, stvp(Start, Transport, Via, Path), Dest) :-
+    direct(Start, Transport, Via),
+    spd(Via, Path, Dest).
+
+
+direct(Start, car, Dest) :-
+    byCar(Start, Dest).
+
+direct(Start, train, Dest) :-
+    byTrain(Start, Dest).
+
+direct(Start, plane, Dest) :-
+    byPlane(Start, Dest).

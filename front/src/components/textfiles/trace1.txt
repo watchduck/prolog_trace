@@ -1,0 +1,12 @@
+Call: (8) jealous(alice, _1) ? creep
+Call: (9) loves(alice, _2) ? creep
+Exit: (9) loves(alice, bob) ? creep
+Call: (9) loves(bob, _1) ? creep
+Exit: (9) loves(bob, alice) ? creep
+Call: (9) \=(alice, alice) ? creep
+Fail: (9) \=(alice, alice) ? creep
+Redo: (9) loves(bob, _1) ? creep
+Exit: (9) loves(bob, clara) ? creep
+Call: (9) \=(alice, clara) ? creep
+Exit: (9) \=(alice, clara) ? creep
+Exit: (8) jealous(alice, clara) ? creep

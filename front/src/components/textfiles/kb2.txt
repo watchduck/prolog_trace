@@ -1,0 +1,11 @@
+child(a, b).
+child(b, c).
+child(c, d).
+child(d, e).
+
+descend(X,Y) :-
+    child(X,Y).
+
+descend(X,Y) :-
+    child(X,Z),
+    descend(Z,Y).
