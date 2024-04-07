@@ -10,11 +10,14 @@ The following screenshots show a console output and the two versions of the corr
     <td><img src=".img/jealous_console.png">
 </table>
 
-The backend uses Django REST framework and the frontend is written in Vue.js.
-(Like my [DAG](https://github.com/watchduck/DAG) app.)
+The app is not quite ready for use in [RL](https://en.wikipedia.org/wiki/Real_life), because it does not recognize
+infix operators.<br>E.g. `alice\=clara` has been converted to `\=(alice, clara)` to make the example above work.
 
-The app can be found at **[prolog-trace.watchduck.net](https://prolog-trace.watchduck.net)**.
-(The backend API is [backend.prolog-trace.watchduck.net/trace](https://backend.prolog-trace.watchduck.net/trace).) <br>
+The backend uses Django REST framework and the frontend is written in Vue.js.
+
+The app can be found at **[prolog-trace.watchduck.net](https://prolog-trace.watchduck.net)**.<br>
+(The backend API is [backend.prolog-trace.watchduck.net/trace](https://backend.prolog-trace.watchduck.net/trace).) 
+
 An important part of the backend is
 [text_to_dicts.py](back/app/utils/text_to_dicts.py),
 which is explained in
